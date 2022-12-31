@@ -2,13 +2,14 @@ import React, { useState } from "react";
 
 const TileStyle = {
     width: 450,
-    height: 450,
+    height: 350,
+    marginBottom: 0,
+    marginTop: 30,
 };
 const ImageStyle = {
     objectFit: "contain",
 };
 const LoaderStyle = {
-    border: "1px solid black",
     display: "inline-block",
 };
 
@@ -101,10 +102,10 @@ export const Memlist = (props) => {
         <div>
 
             {Data.filter(
-                mems => 
-                (mems.upvotes - mems.downvotes > 5 && props.page === "hot")
-                    || 
-                (mems.upvotes - mems.downvotes <= 5 && props.page === "regular")
+                mems =>
+                    (mems.upvotes - mems.downvotes > 5 && props.page === "hot")
+                    ||
+                    (mems.upvotes - mems.downvotes <= 5 && props.page === "regular")
             ).map((mem) => {
                 return (
                     <div>
@@ -114,9 +115,9 @@ export const Memlist = (props) => {
                         />
                         <div>
                             <button onClick={() => { incr(mem.id, "U") }}>
-                                + {mem.upvotes}</button>
+                                ⬆️ {mem.upvotes}</button>
                             <button onClick={() => { incr(mem.id, "D") }}>
-                                - {mem.downvotes}</button>
+                                ⬇️ {mem.downvotes}</button>
                         </div>
                     </div>
                 );
