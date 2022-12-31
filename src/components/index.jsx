@@ -2,17 +2,21 @@ import { NavLink, Routes, Route } from "react-router-dom";
 import styles from "./index.module.css";
 import { Memlist } from "./memBase";
 
-
 export const Service = () => {
+
     return (
 
         <div>
             <div className={styles.NavBar}>
+
                 <div className={styles.NavLink}>
-                    <NavLink to="/regular">Regular</NavLink>
+                    <NavLink style={({isActive})=>({color: isActive ? '#fff':'#545ebf'}) } 
+                    to="/regular">Regular</NavLink>
                 </div>
+
                 <div className={styles.NavLink}>
-                    <NavLink to="/hot">Hot</NavLink>
+                    <NavLink style={({isActive})=>({color: isActive ? '#fff':'#545ebf'}) }
+                    to="/hot">Hot</NavLink>
                 </div>
             </div>
 
@@ -23,3 +27,4 @@ export const Service = () => {
         </div>
     );
 };
+
