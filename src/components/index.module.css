@@ -1,0 +1,14 @@
+.NavBar {
+    height: 70px;
+    background: rgb(35, 35, 35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.NavLink {
+    font-style: italic;
+    padding: 20px;
+    background: rgb(221, 221, 221);
+    border: 1px solid rgb(255, 253, 253);
+    margin: 4px 4px;
+}
